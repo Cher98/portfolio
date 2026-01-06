@@ -9,8 +9,10 @@ Title: D20 Dice (W20 Würfel) 3D model [FREE]
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
+const MODEL_URL = `${import.meta.env.BASE_URL}models/d20_dice_w20_wurfel_3d_model_free.glb`;
+
 export function D20(props) {
-  const { nodes, materials } = useGLTF('/models/d20_dice_w20_wurfel_3d_model_free.glb')
+  const { nodes, materials } = useGLTF(MODEL_URL)
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
@@ -31,4 +33,4 @@ export function D20(props) {
   )
 }
 
-useGLTF.preload('/models/d20_dice_w20_wurfel_3d_model_free.glb')
+useGLTF.preload(MODEL_URL)
