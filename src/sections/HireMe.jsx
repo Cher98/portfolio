@@ -35,7 +35,7 @@ const HireMe = () => {
           >
             Download My CV
           </button>
-          <div className="flex gap-5">
+          <div className="flex gap-5 py-5 lg:py-2">
             {mySocials.map((social) => (
               <a
                 key={social.name}
